@@ -12,24 +12,32 @@
 * Deploy de Um App Service com a connection string do banco criado
 
 
-### Comandos
-
-terraform init
--- Baixa o provider e plugins caso necessário
-
-terraform plan
-
-
-
-
-## Passos para instalação terraform
+### Passos para instalação terraform
 
 https://www.terraform.io/downloads.html
 
-## Para funcionar com o azure, instalar o azure cli
 
-https://docs.microsoft.com/pt-br/cli/azure/install-azure-cli-apt?view=azure-cli-latest
+### Comandos
 
-## Logar no azure pelo azure cli seguindo as instruções do link abaixo:
+    terraform init --Baixa o provider e plugins caso necessário
 
-https://www.terraform.io/docs/providers/azurerm/guides/azure_cli.html
+    terraform plan
+
+    terraform apply
+
+### Para funcionar com o azure
+
+* Instalar o azure cli https://docs.microsoft.com/pt-br/cli/azure/install-azure-cli-apt?view=azure-cli-latest
+* Logar no azure pelo azure cli seguindo as instruções do link abaixo:
+
+    https://www.terraform.io/docs/providers/azurerm/guides/azure_cli.html
+
+### Para funcionar com a aws
+
+* Adicionar usuário administrador no IAM e baixar o CSV com as credenciais no fim do processo
+* Instalar o aws CLI https://aws.amazon.com/pt/cli/
+* Rodar o comando aws configure e colocar as credenciais que estão no CSV baixado no momento da criação do usuário
+
+### Infraestrutura como código Google Cloud
+
+    https://github.com/schweikert/gcp-infra-as-code/blob/master/cluster-1/cluster.yaml

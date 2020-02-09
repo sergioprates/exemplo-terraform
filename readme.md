@@ -8,6 +8,19 @@
 <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.png"/>
 </a>
 
+* Deploy de um banco MySQL
+* Deploy de Um App Service com a connection string do banco criado
+
+
+### Comandos
+
+terraform init
+-- Baixa o provider e plugins caso necessário
+
+terraform plan
+
+
+
 
 ## Passos para instalação terraform
 

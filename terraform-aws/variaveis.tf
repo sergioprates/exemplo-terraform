@@ -25,6 +25,3 @@ variable "nomeRecursoBanco" {
     default = "varzeadb"
 }
 
-variable "security_group_id" {
- default = "sg-11111" 
-}

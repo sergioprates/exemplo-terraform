@@ -38,6 +38,7 @@
             }
         },
         "dbSkuName": {
+            // https://docs.microsoft.com/en-us/azure/mysql/concepts-pricing-tiers
             "type": "string",
             "defaultValue": "GP_Gen5_2",
             "allowedValues": [
@@ -133,7 +134,8 @@
             "name": "[parameters('siteName')]",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[variables('hostingPlanName')]"
+                "[variables('hostingPlanName')]",
+                "[concat('Microsoft.DBforMySQL/servers/', variables('serverName'))]"
             ],
             "properties": {
                 "siteConfig": {
@@ -150,6 +152,7 @@
                 "serverFarmId": "[variables('hostingPlanName')]"
             }
         },
+        //https://docs.microsoft.com/en-us/azure/templates/microsoft.sql/2017-10-01-preview/servers/databases
         {
             "type": "Microsoft.DBforMySQL/servers",
             "apiVersion": "2017-12-01",

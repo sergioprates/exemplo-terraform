@@ -17,3 +17,7 @@
         "cost": "$0"
    }
 }
+
+
+//https://docs.microsoft.com/en-us/azure/templates/microsoft.sql/2017-10-01-preview/servers/databases
+// https://docs.microsoft.com/en-us/azure/mysql/concepts-pricing-tiers

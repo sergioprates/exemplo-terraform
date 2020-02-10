@@ -32,6 +32,10 @@ https://www.terraform.io/downloads.html
 
     https://www.terraform.io/docs/providers/azurerm/guides/azure_cli.html
 
+    
+//https://docs.microsoft.com/en-us/azure/templates/microsoft.sql/2017-10-01-preview/servers/databases
+// https://docs.microsoft.com/en-us/azure/mysql/concepts-pricing-tiers
+
 ### Para funcionar com a aws
 
 * Adicionar usuário administrador no IAM e baixar o CSV com as credenciais no fim do processo
@@ -41,3 +45,4 @@ https://www.terraform.io/downloads.html
 ### Infraestrutura como código Google Cloud
 
     https://github.com/schweikert/gcp-infra-as-code/blob/master/cluster-1/cluster.yaml
+

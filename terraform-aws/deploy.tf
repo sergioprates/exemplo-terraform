@@ -62,4 +62,19 @@ resource "aws_security_group" "permitirAcesso" {
   }
 }
 
+resource "aws_elastic_beanstalk_application" "app" {
+  name = "app-net"
+  description = "app-net-descricao"
+}
 
+resource "aws_elastic_beanstalk_environment" "app-env" {
+  name = "app-env-nome"
+  application = aws_elastic_beanstalk_application.app.name
+  solution_stack_name = "64bit Windows Server Core 2019 v2.5.0 running IIS 10.0"
+
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name = "defaultConnection"
+    value = "Server=${aws_db_instance.demoMysql.address};Port=3306;Database=${var.nomeBancoDeDados};Uid=${var.usuarioMySql}@${var.nomeRecursoBanco};Pwd=${var.senhaMySql};"
+  }
+}

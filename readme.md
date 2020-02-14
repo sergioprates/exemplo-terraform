@@ -10,7 +10,7 @@
 
 * Deploy de um banco MySQL
 * Deploy de Um App Service com a connection string do banco criado
-
+* Pelo azure é possível deixar templates cadastrados para fazer o deploy
 
 ### Passos para instalação terraform
 
@@ -33,8 +33,6 @@ https://www.terraform.io/downloads.html
     https://www.terraform.io/docs/providers/azurerm/guides/azure_cli.html
 
     
-//https://docs.microsoft.com/en-us/azure/templates/microsoft.sql/2017-10-01-preview/servers/databases
-// https://docs.microsoft.com/en-us/azure/mysql/concepts-pricing-tiers
 
 ### Para funcionar com a aws
 
@@ -45,4 +43,16 @@ https://www.terraform.io/downloads.html
 ### Infraestrutura como código Google Cloud
 
     https://github.com/schweikert/gcp-infra-as-code/blob/master/cluster-1/cluster.yaml
+
+### Coisas Interessantes
+
+* https://www.azuredevopslabs.com/labs/vstsextend/terraform/
+* https://docs.microsoft.com/en-us/azure/templates/microsoft.sql/2017-10-01-preview/servers/databases
+* https://docs.microsoft.com/en-us/azure/mysql/concepts-pricing-tiers
+
+    az mysql server create -l northeurope -g testgroup -n testsvr -u username -p password \ --sku-name B_Gen5_1 --ssl-enforcement Disabled \ --backup-retention 10 --geo-redundant-backup Enabled --storage-size 51200 --tags "key=value" --version {server-version}
+
+    az group create --name ExemploLambda3 --location "Central US"
+    az deployment create --resource-group ExemploLambda3 --location "Central US" --template-file ./azure-arm/azuredeploy.json
+
 
